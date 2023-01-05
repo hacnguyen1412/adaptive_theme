@@ -5,7 +5,6 @@
 import 'dart:convert';
 
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:adaptive_theme/src/adaptive_theme_preferences.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
