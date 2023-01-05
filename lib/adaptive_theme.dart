@@ -4,7 +4,6 @@
 
 library adaptive_theme;
 
-export 'src/adaptive_theme_preferences.dart';
 export 'src/adaptive_theme.dart';
 export 'src/adaptive_theme_manager.dart';
 export 'src/adaptive_theme_mode.dart';
