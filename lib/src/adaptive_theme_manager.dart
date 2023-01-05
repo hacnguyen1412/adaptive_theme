@@ -66,8 +66,10 @@ mixin AdaptiveThemeManager<T extends Object> {
       if (pref == null) {
         _preferences.save();
       } else {
-        _preferences = pref;
-        updateState();
+        if (pref.mode != initial) {
+          _preferences = pref;
+          updateState();
+        }
       }
     });
   }
