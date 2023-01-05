@@ -61,17 +61,6 @@ mixin AdaptiveThemeManager<T extends Object> {
     _modeChangeNotifier = ValueNotifier(initial);
     _darkTheme = dark;
     _preferences = ThemePreferences.initial(mode: initial);
-
-    ThemePreferences.fromPrefs().then((pref) {
-      if (pref == null) {
-        _preferences.save();
-      } else {
-        if (pref.mode != initial) {
-          _preferences = pref;
-          updateState();
-        }
-      }
-    });
   }
 
   /// Sets light theme as current

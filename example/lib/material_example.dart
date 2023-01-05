@@ -21,16 +21,18 @@ class MaterialExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveTheme(
-      light: ThemeData.light(),
-      dark: ThemeData.dark(),
-      initial: savedThemeMode ?? AdaptiveThemeMode.light,
-      builder: (theme, darkTheme) => MaterialApp(
-        title: 'Adaptive Theme Demo',
-        theme: theme,
-        darkTheme: darkTheme,
-        home: MyHomePage(onChanged: onChanged),
-      ),
-    );
+        light: ThemeData.light(),
+        dark: ThemeData.dark(),
+        initial: AdaptiveThemeMode.dark,
+        builder: (theme, darkTheme) {
+          print("REBUILD");
+          return MaterialApp(
+            title: 'Adaptive Theme Demo',
+            theme: theme,
+            darkTheme: darkTheme,
+            home: MyHomePage(onChanged: onChanged),
+          );
+        });
   }
 }
 
